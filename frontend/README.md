@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# Board App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A free classifieds board: give, find, help!
 
-Currently, two official plugins are available:
+## 📦 Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `backend/` — Node.js server (Express + MongoDB)
+- `frontend/` — React + Vite client
 
-## React Compiler
+## 🚀 How to Run the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend
 
-## Expanding the ESLint configuration
+1. Go to the backend folder:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start MongoDB (for example, via Docker):
+   ```bash
+   docker run -d --name board-mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=pass99 mongo
+   ```
+4. Create a `.env` file based on `.env.example`:
+   ```
+   PORT=5001
+   MONGODB_URI=mongodb://admin:pass99@localhost:27017/board-app?authSource=admin
+   ```
+5. Start the server:
+   ```bash
+   npm run dev
+   ```
+6. Check in your browser:  
+   [http://localhost:5001/](http://localhost:5001/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Go to the frontend folder:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend:
+   ```bash
+   npm run dev
+   ```
+4. Open the address shown by Vite in your browser (usually [http://localhost:5173/](http://localhost:5173/))
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Technologies
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Node.js, Express, MongoDB, Mongoose
+- React, Vite, TypeScript, React Router
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📚 Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- View all ads
+- Add a new ad
+- View ad details
+- (Planned) Registration, login, user profile
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👨‍💻 Developer
+
+- [github.com/Vitalii-uap](https://github.com/Vitalii-uap)
