@@ -1,0 +1,36 @@
+.nav {
+  background: #fffbe6;
+  border-bottom: 1px solid #eee;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: system-ui, sans-serif;
+}
+
+.link {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.link:hover {
+  background: #ffe066;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.account {
+  font-weight: 600;
+  color: #fff;
+  background: #ffd600;
+  border-radius: 6px;
+  padding: 8px 18px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
