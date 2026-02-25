@@ -3,17 +3,46 @@ import type { Ad } from "../types/ad";
 import styles from "./AdsList.module.css";
 import AdCard from "../components/AdCard";
 import Button from "../components/Button";
+import Spinner from "../components/Spinner";
+import Empty from "../components/Empty";
+
+import { mockAds } from "../data/mockAds";
 
 export default function AdsList() {
   const [ads, setAds] = useState<Ad[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
   const ITEMS_PER_PAGE = 10;
 
+  // useEffect(() => {
+  //   fetch("http://localhost:5001/api/ads")
+  //     .then((res) => res.json())
+  //     .then((data) => setAds(data))
+  //     .catch((err) => console.error(err));
+  // }, []);
+
+  // useEffect(() => {
+  //   const fetchAds = async () => {
+  //     try {
+  //       setLoading(true);
+
+  //       const res = await fetch("http://localhost:5001/api/ads");
+  //       const data = await res.json();
+
+  //       setAds(data);
+  //     } catch (err) {
+  //       console.error(err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   fetchAds();
+  // }, []);
+
   useEffect(() => {
-    fetch("http://localhost:5001/api/ads")
-      .then((res) => res.json())
-      .then((data) => setAds(data))
-      .catch((err) => console.error(err));
+    setAds(mockAds);
+    setLoading(false);
   }, []);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -21,6 +50,8 @@ export default function AdsList() {
   const currentAds = ads.slice(startIndex, endIndex);
   const totalPages = Math.ceil(ads.length / ITEMS_PER_PAGE);
 
+  if (loading) return <Spinner />;
+  if (ads.length === 0) return <Empty />;
   return (
     <div className={styles.container}>
       <div className={styles.list}>
