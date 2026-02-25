@@ -15,13 +15,6 @@ export default function AdsList() {
   const ITEMS_PER_PAGE = 10;
 
   // useEffect(() => {
-  //   fetch("http://localhost:5001/api/ads")
-  //     .then((res) => res.json())
-  //     .then((data) => setAds(data))
-  //     .catch((err) => console.error(err));
-  // }, []);
-
-  // useEffect(() => {
   //   const fetchAds = async () => {
   //     try {
   //       setLoading(true);
