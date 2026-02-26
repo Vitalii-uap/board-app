@@ -5,4 +5,5 @@ export type Ad = {
   category: string;
   images: string[];
   user: { username: string; phone: string };
+  createdAt: string;
 };

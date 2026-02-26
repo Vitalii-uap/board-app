@@ -44,9 +44,9 @@ export default function AdsList() {
   const totalPages = Math.ceil(ads.length / ITEMS_PER_PAGE);
 
   if (loading) return <Spinner />;
-  if (ads.length === 0) return <Empty />;
+  if (ads.length === 0) return <Empty>No ads yet 💤</Empty>;
   return (
-    <div className={styles.container}>
+    <div className={styles.page}>
       <div className={styles.list}>
         {currentAds.map((ad) => (
           <AdCard key={ad._id} ad={ad} />

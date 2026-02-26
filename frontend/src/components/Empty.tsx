@@ -1,10 +1,14 @@
 import styles from "./Empty.module.css";
 
-export default function Empty() {
+type EmptyProps = {
+  children: React.ReactNode;
+};
+
+export default function Empty({ children }: EmptyProps) {
   return (
     <div className={styles.container}>
       <div className={styles.emoji}>😔</div>
-      <p className={styles.subtitle}>No ads yet 💤</p>
+      <p className={styles.subtitle}>{children}</p>
     </div>
   );
 }

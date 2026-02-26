@@ -6,6 +6,7 @@ export const mockAds = [
     category: "furniture",
     images: ["https://picsum.photos/200/200?random=1"],
     user: { username: "Olena", phone: "+380991112233" },
+    createdAt: "2025-02-20T10:15:00.000Z",
   },
   {
     _id: "2",
@@ -14,6 +15,7 @@ export const mockAds = [
     category: "services",
     images: ["https://picsum.photos/200/200?random=2"],
     user: { username: "Taras", phone: "+380991112244" },
+    createdAt: "2025-02-21T08:30:00.000Z",
   },
   {
     _id: "3",
@@ -22,6 +24,7 @@ export const mockAds = [
     category: "sport",
     images: ["https://picsum.photos/200/200?random=3"],
     user: { username: "Ira", phone: "+380991112255" },
+    createdAt: "2025-02-21T14:45:00.000Z",
   },
   {
     _id: "4",
@@ -30,6 +33,7 @@ export const mockAds = [
     category: "furniture",
     images: ["https://picsum.photos/200/200?random=4"],
     user: { username: "Maksym", phone: "+380991112266" },
+    createdAt: "2025-02-22T09:10:00.000Z",
   },
   {
     _id: "5",
@@ -38,6 +42,7 @@ export const mockAds = [
     category: "services",
     images: ["https://picsum.photos/200/200?random=5"],
     user: { username: "Anna", phone: "+380991112277" },
+    createdAt: "2025-02-22T16:20:00.000Z",
   },
   {
     _id: "6",
@@ -46,6 +51,7 @@ export const mockAds = [
     category: "sport",
     images: ["https://picsum.photos/200/200?random=6"],
     user: { username: "Dmytro", phone: "+380991112288" },
+    createdAt: "2025-02-23T11:05:00.000Z",
   },
   {
     _id: "7",
@@ -54,6 +60,7 @@ export const mockAds = [
     category: "furniture",
     images: ["https://picsum.photos/200/200?random=7"],
     user: { username: "Svitlana", phone: "+380991112299" },
+    createdAt: "2025-02-23T18:40:00.000Z",
   },
   {
     _id: "8",
@@ -62,6 +69,7 @@ export const mockAds = [
     category: "services",
     images: ["https://picsum.photos/200/200?random=8"],
     user: { username: "Roman", phone: "+380991112300" },
+    createdAt: "2025-02-24T07:55:00.000Z",
   },
   {
     _id: "9",
@@ -70,6 +78,7 @@ export const mockAds = [
     category: "sport",
     images: ["https://picsum.photos/200/200?random=9"],
     user: { username: "Kateryna", phone: "+380991112311" },
+    createdAt: "2025-02-24T13:15:00.000Z",
   },
   {
     _id: "10",
@@ -78,6 +87,7 @@ export const mockAds = [
     category: "furniture",
     images: ["https://picsum.photos/200/200?random=10"],
     user: { username: "Andrii", phone: "+380991112322" },
+    createdAt: "2025-02-25T10:00:00.000Z",
   },
   {
     _id: "11",
@@ -86,6 +96,7 @@ export const mockAds = [
     category: "services",
     images: ["https://picsum.photos/200/200?random=11"],
     user: { username: "Yulia", phone: "+380991112333" },
+    createdAt: "2025-02-25T15:35:00.000Z",
   },
   {
     _id: "12",
@@ -94,5 +105,6 @@ export const mockAds = [
     category: "sport",
     images: ["https://picsum.photos/200/200?random=12"],
     user: { username: "Viktor", phone: "+380991112344" },
+    createdAt: "2025-02-26T09:50:00.000Z",
   },
 ];

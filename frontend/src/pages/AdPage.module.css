@@ -1,0 +1,51 @@
+.page {
+  max-width: 1100px; /* загальна ширина сторінки */
+  margin: 24px auto;
+  padding: 0 16px; /* бокові відступи */
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* рівні */
+  gap: 24px;
+  align-items: start;
+}
+
+.gallery {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.mainImage {
+  width: 100%;
+  max-height: 360px; /* можна 400px */
+  object-fit: contain; /* показує повністю */
+  background: #f7f7f7;
+  border-radius: 12px;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.navBtn:first-of-type {
+  left: 12px;
+}
+.navBtn:last-of-type {
+  right: 12px;
+}
+
+.details {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+}
