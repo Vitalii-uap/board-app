@@ -20,7 +20,7 @@ export default function HomePage() {
         </div>
         <p className={styles.info}>Only registered users can create ads.</p>
         <div className={styles.buttons}>
-          <Button>Create Account</Button>
+          <Button onClick={() => navigate("/login")} >Create Account</Button>
           <Button onClick={() => navigate("/adslist")}>View Ads List</Button>
         </div>
         <footer className={styles.footer}>
