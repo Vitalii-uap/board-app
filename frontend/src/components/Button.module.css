@@ -1,15 +1,101 @@
 .button {
-  background: #ffd600;
-  color: #222;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-weight: 600;
   border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: system-ui, sans-serif;
+  border-radius: 10px; /* трохи м'якше, як на сучасних платформах */
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
 }
-.button:hover {
-  background: #ffe066;
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Розміри */
+.sm {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+}
+.md {
+  padding: 12px 24px;
+  font-size: 1.05rem;
+}
+.lg {
+  padding: 14px 32px;
+  font-size: 1.15rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Варіанти */
+
+.primary {
+  background: #16a34a; /* зелений як "Реєстрація" на SmartTender */
+  color: white;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+.primary:hover:not(:disabled) {
+  background: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(22, 163, 74, 0.3);
+}
+
+/* Вторинна дія — наприклад "Вхід", "Скасувати" */
+.secondary {
+  background: #1e40af; /* синій Prozorro/SmartTender акцент */
+  color: white;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.2);
+}
+
+.secondary:hover:not(:disabled) {
+  background: #1e3a8a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+/* Контурна кнопка — для "Browse", "Cancel" тощо */
+.outline {
+  background: transparent;
+  color: #1e40af;
+  border: 2px solid #3b82f6;
+}
+
+.outline:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.08);
+  color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.ghost {
+  background: transparent;
+  color: #374151;
+  border: none;
+  padding: 10px 16px;
+}
+
+.ghost:hover:not(:disabled) {
+  background: rgba(243, 244, 246, 0.7);
+  color: #111827;
+}
+
+.button:disabled {
+  background: #d1d5db !important;
+  color: #6b7280 !important;
+  border-color: #d1d5db !important;
+  box-shadow: none !important;
 }
