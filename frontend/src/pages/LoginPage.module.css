@@ -1,49 +1,109 @@
-.container {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #fff;
-  border-radius: 12px;
-  font-family: system-ui, sans-serif;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  padding: 32px;
-  text-align: center;
-}
-
 .wrapper {
-  /* min-height: 100vh; */
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 80px); /* враховуючи висоту навігації ~72-80px */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(22, 163, 74, 0.05) 0%,
+    rgba(30, 64, 175, 0.03) 100%
+  ); /* легкий градієнт для настрою */
 }
 
-.buttons {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin-top: 24px;
-}
-
-.emoji {
-  font-size: 3rem;
-  margin-bottom: 12px;
+.container {
+  max-width: 480px; /* компактніше, ніж 600px — зручніше для форм */
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 40px 32px;
+  text-align: center;
+  backdrop-filter: blur(8px); /* легкий blur для преміум-відчуття */
+  border: 1px solid rgba(229, 231, 235, 0.6);
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  color: #c7aa1d;
-  margin-bottom: 8px;
+  color: #1e293b; /* темний slate для контрасту */
+  margin: 0 0 12px;
+  line-height: 1.2;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 24px;
+  font-size: 1.15rem;
+  color: #64748b; /* slate-500 — м'який сірий */
+  margin: 0 0 32px;
 }
 
-.info {
-  margin-bottom: 24px;
-  color: #888;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  padding: 14px 16px;
+  font-size: 1.05rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  background: #f9fafb;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  border-color: #16a34a; /* зелений акцент */
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+  background: white;
+}
+
+.forgot {
+  text-align: right;
+  margin-top: -8px;
+}
+
+.forgotLink {
+  color: #3b82f6; /* синій для посилань */
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+.buttons {
+  margin-top: 16px;
+}
+
+.registerPrompt {
+  margin-top: 28px;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.registerLink {
+  color: #16a34a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+  color: #15803d;
+}
+
+/* Адаптивність */
+@media (max-width: 480px) {
+  .container {
+    padding: 32px 20px;
+    border-radius: 12px;
+  }
+  .title {
+    font-size: 2rem;
+  }
 }

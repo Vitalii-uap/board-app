@@ -14,7 +14,7 @@
 .background {
   position: fixed;
   inset: 0;
-  background: url("images/image1.png") center / cover no-repeat;
+  background: url("images/image2.png") center / cover no-repeat;
   z-index: -2;
 }
 

@@ -12,7 +12,7 @@ export default function Navigation() {
         {/* Ліва частина — логотип + меню */}
         <div className={styles.left}>
           <Link to="/" className={styles.logo}>
-            FreePick<span>.biz</span>
+            FreePick<span>.cc</span>
           </Link>
 
           <nav className={styles.nav}>
