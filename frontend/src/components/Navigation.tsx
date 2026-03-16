@@ -33,7 +33,7 @@ export default function Navigation() {
               Post Free
             </NavLink>
             <NavLink
-              to="/knowledge-base"
+              to="/about"
               className={({ isActive }) =>
                 isActive ? `${styles.link} ${styles.active}` : styles.link
               }

@@ -5,6 +5,8 @@ import AdsList from "./pages/AdsList";
 import AdPage from "./pages/AdPage";
 import AddAdPage from "./pages/AddAdPage";
 import Navigation from "./components/Navigation";
+import AboutPage from "./pages/AboutPage";
+import RulesPage from "./pages/RulesPage";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/adslist" element={<AdsList />} />
         <Route path="/ads/:id" element={<AdPage />} />
         <Route path="/add" element={<AddAdPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/rules" element={<RulesPage />} />
       </Routes>
     </BrowserRouter>
   );
