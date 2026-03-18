@@ -7,6 +7,7 @@ import AddAdPage from "./pages/AddAdPage";
 import Navigation from "./components/Navigation";
 import AboutPage from "./pages/AboutPage";
 import RulesPage from "./pages/RulesPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/add" element={<AddAdPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/rules" element={<RulesPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
     </BrowserRouter>
   );
